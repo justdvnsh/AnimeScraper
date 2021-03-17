@@ -88,6 +88,26 @@ An api for scraping anime websites.
 ```
 </details>
 
+### 4) Extract Episode
+* Endpoint: ``apiUrl/load_episode?provider=<providerName>&link=<episodeLink>&parent=<animeLink>``
+* Method: GET
+<details>
+<summary>Response</summary>
+
+
+```json
+{
+   "message":"ok",
+   "data":{
+      "link":"https://mountainoservo0002.animecdn.com/Shingeki-no-Kyojin-The-Final-Season/Shingeki-no-Kyojin-The-Final-Season-Episode-01-1080p.mp4",
+      "headers":{
+         "referer":"https://mountainoservo0002.animecdn.com/Shingeki-no-Kyojin-The-Final-Season/Shingeki-no-Kyojin-The-Final-Season-Episode-01-1080p.mp4"
+      }
+   }
+}
+```
+</details>
+
 
 ## Note:
 Before installing make sure git is installed on your machine.
