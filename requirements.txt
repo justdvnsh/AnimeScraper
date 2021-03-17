@@ -1,0 +1,4 @@
+git+https://github.com/ArjixGamer/anime-downloader@patch-30
+Flask==1.1.2
+Flask-RESTful==0.3.8
+webargs
