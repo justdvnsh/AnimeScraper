@@ -52,7 +52,13 @@ def get_episode(link, provider, parent):
     try:
         episode_class = AnimeEpisode.subclasses[provider]
         episode = episode_class(link, parent=DummyParent())
-        return episode.source().stream_url
+        source = episode.source()
+        return {
+            "link": source.stream_url,
+            "headers": {
+                "referer": source.referer
+            }
+        }
     except KeyError:
         provider_ = get_anime_class(provider)
         search = provider_(parent)
