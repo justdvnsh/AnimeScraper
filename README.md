@@ -15,21 +15,21 @@ return:
 
 ```json
 {
-  data: [
+  "data": [
           {
-            link: "https://www.animefreak.tv/watch/overlord-ple-ple-pleiades-ova",
-            title: "Overlord: Ple Ple Pleiades (OVA)",
-            poster: "",
+            "link": "https://www.animefreak.tv/watch/overlord-ple-ple-pleiades-ova",
+            "title": "Overlord: Ple Ple Pleiades (OVA)",
+            "poster": "",
           },
           {
-            link: "https://www.animefreak.tv/watch/overlord-iii",
-            title: "Overlord III",
-            poster: "",
+            "link": "https://www.animefreak.tv/watch/overlord-iii",
+            "title": "Overlord III",
+            "poster": "",
           },
           {
-            link: "https://www.animefreak.tv/watch/overlord",
-            title: "Overlord",
-            poster: "",
+            "link": "https://www.animefreak.tv/watch/overlord",
+            "title": "Overlord",
+            "poster": "",
           }
       ],
   message: "ok",
