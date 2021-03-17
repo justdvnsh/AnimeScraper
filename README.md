@@ -1,5 +1,5 @@
 ## Anime Scraper
-
+An api for scraping anime websites.
 
 ## Installation Instructions:
 1) git clone https://github.com/ArjixGamer/AnimeScraper-1
