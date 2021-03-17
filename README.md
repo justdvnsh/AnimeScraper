@@ -102,9 +102,9 @@ Make sure to urlencode any kind of data you pass to the api.
 {
    "message":"ok",
    "data":{
-      "link":"https://mountainoservo0002.animecdn.com/Shingeki-no-Kyojin-The-Final-Season/Shingeki-no-Kyojin-The-Final-Season-Episode-01-1080p.mp4",
+      "link":"link to mp4",
       "headers":{
-         "referer":"https://mountainoservo0002.animecdn.com/Shingeki-no-Kyojin-The-Final-Season/Shingeki-no-Kyojin-The-Final-Season-Episode-01-1080p.mp4"
+         "referer":"referer link"
       }
    }
 }
