@@ -10,20 +10,34 @@ app = Flask(__name__)
 api = Api(app)
 
 
+def tryout(f):
+    def decorator_function(*args, **kwargs):
+        try:
+            return f(*args, **kwargs)
+        except:
+            return {"message": "error", "data": None}
+    return decorator_function
+
+
 class Search(Resource):
-    def get(self, query):
-        search = Twist.search(query)
-        return {'data': [utils.SearchResult_to_json(x) for x in search]}
+    @tryout
+    @use_args({'provider': fields.Str(required=True)}, location="query")
+    def get(self, args, query):
+        search = utils.search_using_provider(query, args['provider'])
+        return {'data': search, 'message': 'ok'}
 
 
 class Episodes(Resource):
+    @tryout
     @use_args({"link": fields.Str(required=True), 'provider': fields.Str(required=True)}, location="query")
     def get(self, args):
-        episodes = utils.get_episodes_using_provider(args['link'], args['provider'])
+        episodes = utils.get_episodes_using_provider(
+            args['link'], args['provider'])
         return episodes
 
 
 class Episode(Resource):
+    @tryout
     @use_args({"link": fields.Str(required=True), 'parent': fields.Str(required=True), 'provider': fields.Str(required=True)}, location="query")
     def get(self, args):
         return utils.get_episode(args['link'], args['provider'], args['parent'])
