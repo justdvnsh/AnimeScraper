@@ -1,5 +1,10 @@
 from anime_downloader.sites import get_anime_class
 from anime_downloader.sites.anime import AnimeEpisode
+from anime_downloader.sites import ALL_ANIME_SITES
+
+
+def get_providers():
+    return [x[1] for x in ALL_ANIME_SITES]
 
 
 class DummyParent:
@@ -29,6 +34,12 @@ def AnimeEpisode_to_json(AnimeEpisode):
         "ep_no": AnimeEpisode.ep_no
     }
     return data
+
+
+def search_using_provider(query, provider):
+    provider = get_anime_class(provider)
+    search = provider.search(query)
+    return [SearchResult_to_json(x) for x in search]
 
 
 def get_episodes_using_provider(link, provider):
