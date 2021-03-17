@@ -9,10 +9,13 @@ An api for scraping anime websites.
 4) python app.py
 
 ## Usage:
+
+1) Search
+```
 endpoint: apiUrl/search/<string:searchQuery>?provider=<providerName>
 method:   GET
 return:
-
+```
 ```json
 {
   "data": [
