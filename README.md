@@ -10,7 +10,26 @@ An api for scraping anime websites.
 
 ## Usage:
 
-### 1) Search
+### 1) Get Available Providers
+* Endpoint: ``apiUrl/search/<string:searchQuery>?provider=<providerName>``
+* Method: GET
+<details>
+<summary>Response</summary>
+
+
+```json
+{
+   "message":"ok",
+   "data":[
+      "4anime",
+      "animefreak"
+   ]
+}
+```
+</details>
+
+
+### 2) Search
 * Endpoint: ``apiUrl/search/<string:searchQuery>?provider=<providerName>``
 * Method: GET
 <details>
@@ -41,7 +60,7 @@ An api for scraping anime websites.
 ```
 </details>
 
-### 2) List-Episodes
+### 3) List-Episodes
 * Endpoint: ``apiUrl/load_episodes?link=<animeLink>&provider=<providerName>``
 * Method: GET
 <details>
