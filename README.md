@@ -32,7 +32,7 @@ return:
             "poster": "",
           }
       ],
-  message: "ok",
+  "message": "ok",
 }
 ```
 
