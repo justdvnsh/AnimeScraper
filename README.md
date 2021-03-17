@@ -11,7 +11,7 @@ An api for scraping anime websites.
 ## Usage:
 
 ### 1) Get Available Providers
-* Endpoint: ``apiUrl/search/<string:searchQuery>?provider=<providerName>``
+* Endpoint: ``apiUrl/get_providers``
 * Method: GET
 <details>
 <summary>Response</summary>
