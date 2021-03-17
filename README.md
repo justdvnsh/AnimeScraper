@@ -11,11 +11,12 @@ An api for scraping anime websites.
 ## Usage:
 
 1) Search
-```
-endpoint: apiUrl/search/<string:searchQuery>?provider=<providerName>
-method:   GET
-return:
-```
+* Endpoint: apiUrl/search/<string:searchQuery>?provider=<providerName>
+* Method:   GET
+<details>
+<summary>Response</summary>
+
+
 ```json
 {
   "data": [
@@ -38,6 +39,6 @@ return:
   "message": "ok",
 }
 ```
-
+</details>
 ## Note:
 Before installing make sure git is installed on your machine.
