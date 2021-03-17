@@ -40,5 +40,6 @@ An api for scraping anime websites.
 }
 ```
 </details>
+
 ## Note:
 Before installing make sure git is installed on your machine.
