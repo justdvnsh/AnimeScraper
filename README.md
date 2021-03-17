@@ -10,7 +10,7 @@ An api for scraping anime websites.
 
 ## Usage:
 
-1) Search
+### 1) Search
 * Endpoint: ``apiUrl/search/<string:searchQuery>?provider=<providerName>``
 * Method: GET
 <details>
@@ -19,27 +19,56 @@ An api for scraping anime websites.
 
 ```json
 {
-  "data": [
-          {
-            "link": "https://www.animefreak.tv/watch/overlord-ple-ple-pleiades-ova",
-            "title": "Overlord: Ple Ple Pleiades (OVA)",
-            "poster": "",
-          },
-          {
-            "link": "https://www.animefreak.tv/watch/overlord-iii",
-            "title": "Overlord III",
-            "poster": "",
-          },
-          {
-            "link": "https://www.animefreak.tv/watch/overlord",
-            "title": "Overlord",
-            "poster": "",
-          }
-      ],
-  "message": "ok",
+   "message":"ok",
+   "data":[
+      {
+         "link":"https://www.animefreak.tv/watch/overlord-ple-ple-pleiades-ova",
+         "title":"Overlord: Ple Ple Pleiades (OVA)",
+         "poster":""
+      },
+      {
+         "link":"https://www.animefreak.tv/watch/overlord-iii",
+         "title":"Overlord III",
+         "poster":""
+      },
+      {
+         "link":"https://www.animefreak.tv/watch/overlord",
+         "title":"Overlord",
+         "poster":""
+      }
+   ]
 }
 ```
 </details>
+
+### 2) List-Episodes
+* Endpoint: ``apiUrl/load_episodes?link=<animeLink>&provider=<providerName>``
+* Method: GET
+<details>
+<summary>Response</summary>
+
+
+```json
+{
+   "message":"ok",
+   "data":[
+      {
+         "link":"https://www.animefreak.tv/watch/world-witches-hasshin-shimasu/episode/episode-1",
+         "ep_no":1
+      },
+      {
+         "link":"https://www.animefreak.tv/watch/world-witches-hasshin-shimasu/episode/episode-2",
+         "ep_no":2
+      },
+      {
+         "link":"https://www.animefreak.tv/watch/world-witches-hasshin-shimasu/episode/episode-3",
+         "ep_no":3
+      }
+   ]
+}
+```
+</details>
+
 
 ## Note:
 Before installing make sure git is installed on your machine.
