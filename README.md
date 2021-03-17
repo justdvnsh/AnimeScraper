@@ -9,7 +9,6 @@ An api for scraping anime websites.
 4) python app.py
 
 ## Usage:
-```
 endpoint: apiUrl/search/<string:searchQuery>?provider=<providerName>
 method:   GET
 return:
