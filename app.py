@@ -19,6 +19,12 @@ def tryout(f):
     return decorator_function
 
 
+class Providers(Resource):
+    @tryout
+    def get(self):
+        return {"message": "ok", "data": utils.get_providers()}
+
+
 class Search(Resource):
     @tryout
     @use_args({'provider': fields.Str(required=True)}, location="query")
@@ -28,8 +34,8 @@ class Search(Resource):
 
 
 class Episodes(Resource):
-    @tryout
     @use_args({"link": fields.Str(required=True), 'provider': fields.Str(required=True)}, location="query")
+    @tryout
     def get(self, args):
         episodes = utils.get_episodes_using_provider(
             args['link'], args['provider'])
@@ -43,6 +49,7 @@ class Episode(Resource):
         return utils.get_episode(args['link'], args['provider'], args['parent'])
 
 
+api.add_resource(Providers, '/get_providers')
 api.add_resource(Search, '/search/<string:query>')
 api.add_resource(Episodes, '/load_episodes')
 api.add_resource(Episode, '/load_episode')
