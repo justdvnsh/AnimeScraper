@@ -10,6 +10,9 @@ An api for scraping anime websites.
 
 ## Usage:
 
+### Warning!
+Make sure to urlencode any kind of data you pass to the api.
+
 ### 1) Get Available Providers
 * Endpoint: ``apiUrl/get_providers``
 * Method: GET
